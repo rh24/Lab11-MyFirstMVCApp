@@ -3,6 +3,7 @@
 }
 
 table {
+    margin: 0 auto;
     border: 3px solid #BBBBBB;
 }
 
@@ -35,4 +36,9 @@ h4 {
 
 form div {
     margin: 20px;
+}
+
+.results {
+    margin: 0 auto;
+    text-align: center;
 }
