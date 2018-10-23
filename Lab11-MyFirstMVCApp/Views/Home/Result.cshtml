@@ -1,0 +1,48 @@
+﻿@model List<Lab11_MyFirstMVCApp.Models.TimePerson>
+
+@{
+    var begYear = (int)ViewData["begYear"];
+    var endYear = (int)ViewData["endYear"];
+}
+
+<head>
+    <link rel="stylesheet" href="~/StyleSheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+</head>
+<body>
+    <div class="results">
+        <h1>List of Influential People</h1>
+        <h1>from @begYear  to @endYear</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Name</th>
+                    <th>Honor</th>
+                    <th>Country</th>
+                    <th>Birth Year</th>
+                    <th>Death Year</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Context</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var person in Model)
+                {
+                    <tr>
+                        <td>@person.Year</td>
+                        <td>@person.Name</td>
+                        <td>@person.Honor</td>
+                        <td>@person.Country</td>
+                        <td>@person.Birth_Year</td>
+                        <td>@person.DeathYear</td>
+                        <td>@person.Title</td>
+                        <td>@person.Category</td>
+                        <td>@person.Context</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
