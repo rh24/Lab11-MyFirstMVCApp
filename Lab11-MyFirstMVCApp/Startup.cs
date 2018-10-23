@@ -28,13 +28,11 @@ namespace Lab11_MyFirstMVCApp
 
             app.UseStaticFiles();
 
-            app.UseMvc(route =>
+            app.UseMvc(routes =>
             {
-                route.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action="Index"}/{id?}"
-
-                );
+                routes.MapRoute(
+                name: "default",
+                template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
