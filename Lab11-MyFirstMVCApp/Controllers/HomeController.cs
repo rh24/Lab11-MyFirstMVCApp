@@ -15,13 +15,13 @@ namespace Lab11_MyFirstMVCApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(int startYear, int endYear)
+        public IActionResult Index(int begYear, int endYear)
         {
             // Redirect to Result action within this controller
-            return RedirectToAction("Result", new { startYear, endYear });
+            return RedirectToAction("Result", new { begYear, endYear });
         }
 
-        public ViewResult Result(int startYear, int endYear)
+        public ViewResult Result(int begYear, int endYear)
         {
 
             return View();
