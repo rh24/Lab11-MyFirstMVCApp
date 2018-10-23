@@ -2,19 +2,34 @@
 
 <h1>List of Influential People</h1>
 
-@foreach (var person in Model)
-{
-    <div>
-        <ul>
-            <li>Year: @person.Year</li>
-            <li>Name: @person.Name</li>
-            <li>Honor: @person.Honor</li>
-            <li>Country: @person.Country</li>
-            <li>Birth Year: @person.Birth_Year</li>
-            <li>Death Year: @person.DeathYear</li>
-            <li>Title: @person.Title</li>
-            <li>Category: @person.Category</li>
-            <li>Context: @person.Context</li>
-        </ul>
-    </div>
-}
+<table>
+    <thead>
+        <tr>
+            <th>Year</th>
+            <th>Name</th>
+            <th>Honor</th>
+            <th>Country</th>
+            <th>Birth Year</th>
+            <th>Death Year</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Context</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td>@person.Year</td>
+                <td>@person.Name</td>
+                <td>@person.Honor</td>
+                <td>@person.Country</td>
+                <td>@person.Birth_Year</td>
+                <td>@person.DeathYear</td>
+                <td>@person.Title</td>
+                <td>@person.Category</td>
+                <td>@person.Context</td>
+            </tr>
+        }
+    </tbody>
+</table>
