@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Lab11_MyFirstMVCApp.Models;
 
 namespace Lab11_MyFirstMVCApp.Controllers
 {
@@ -23,8 +24,8 @@ namespace Lab11_MyFirstMVCApp.Controllers
 
         public ViewResult Result(int begYear, int endYear)
         {
-
-            return View();
+            List<TimePerson> peopleOfTheYear = TimePerson.GetPersons(begYear, endYear);
+            return View(peopleOfTheYear);
         }
     }
 }

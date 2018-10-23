@@ -1,5 +1,16 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@model List<Lab11_MyFirstMVCApp.Models.TimePerson>
+
+<h1>List of Influential People</h1>
+
+@foreach (var model in Model)
+{
+    <li>Year: @model.Year</li>
+    <li>Name: @model.Name</li>
+    <li>Honor: @model.Honor</li>
+    <li>Country: @model.Country</li>
+    <li>Birth Year: @model.Birth_Year</li>
+    <li>Death Year: @model.DeathYear</li>
+    <li>Title: @model.Title</li>
+    <li>Category: @model.Category</li>
+    <li>Context: @model.Context</li>
 }
