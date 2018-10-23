@@ -1,5 +1,10 @@
 ﻿@model List<Lab11_MyFirstMVCApp.Models.TimePerson>
 
+@{
+    var begYear = (int)ViewData["begYear"];
+    var endYear = (int)ViewData["endYear"];
+}
+
 <head>
     <link rel="stylesheet" href="~/StyleSheet.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -7,6 +12,7 @@
 <body>
     <div class="results">
         <h1>List of Influential People</h1>
+        <h1>from @begYear  to @endYear</h1>
         <table>
             <thead>
                 <tr>

@@ -25,6 +25,10 @@ namespace Lab11_MyFirstMVCApp.Controllers
         public ViewResult Result(int begYear, int endYear)
         {
             List<TimePerson> peopleOfTheYear = TimePerson.GetPersons(begYear, endYear);
+
+            ViewData["begYear"] = begYear;
+            ViewData["endYear"] = endYear;
+
             return View(peopleOfTheYear);
         }
     }
