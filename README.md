@@ -1,6 +1,15 @@
 # Lab11-MyFirstMVCApp
 
-This is my first MVC .NET Core Web Application written in C#.
+This is my first MVC .NET Core Web Application written in C#. The goal of this project is to get familiar with the procedural steps of setting up a .NET Core 2.1 web application. Instead of using the `Web Application` scaffolding, this project was initialized from the `Empty` option in the Visual Studio GUI.
+
+The basic functions of this application are to search by form on the /Home page, which routes to the view /Views/Home/Index by default. This form queries a generic `List` collection of `TimePerson` objects. `TimePerson` objects have been created from a parsed .csv file of raw data. This is provided by TIME Magazine's People of the Year data.
+
+After the user inputs a range of years, the user will be redirected to a results page that formats and displays the matching collection of `TimePerson` objects within the scope of years the user has queried.
+
+## Sample Views
+
+![GetHomeIndex](https://github.com/rh24/Lab11-MyFirstMVCApp/blob/RebeccaHong-Lab11/assets/HomeIndex.png)
+![RedirectToResult](https://github.com/rh24/Lab11-MyFirstMVCApp/blob/RebeccaHong-Lab11/assets/HomeResult.png)
 
 ## Resources
 
