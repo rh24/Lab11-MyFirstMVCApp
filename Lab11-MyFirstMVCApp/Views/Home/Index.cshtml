@@ -5,16 +5,26 @@
 }
 
 <head>
-    <link href="~/StyleSheet.css" />
+    <link rel="stylesheet" href="~/StyleSheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
 </head>
 
 <body>
-    <h1>This is my home index!</h1>
-    <form method="POST">
-        <label for="begYear">Beginning Year:</label>
-        <input maxlength="12" placeholder="Beginning Year" name="begYear" />
-        <label for="endYear">Ending Year:</label>
-        <input name="studentAge" placeholder="Ending Year" />
-        <button type="submit">Find Time People of the Years</button>
-    </form>
+    <div class="search">
+        <h1>TIME</h1>
+        <h4>People of the Year</h4>
+        <form method="POST">
+            <div class="begYear">
+                <label for="begYear">Beginning Year:</label>
+                <input maxlength="12" name="begYear" />
+            </div>
+            <div>
+                <label for="endYear">Ending Year:</label>
+                <input name="endYear" />
+            </div>
+            <div>
+                <button type="submit">Search Influential People</button>
+            </div>
+        </form>
+    </div>
 </body>
