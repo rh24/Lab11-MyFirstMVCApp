@@ -53,9 +53,12 @@ namespace Lab11_MyFirstMVCApp.Models
                 });
             }
 
+            // From the List of TimePerson objects, use LINQ method syntax to grab the objects where their Year property is greater than or equal to the beginning of Year query paramater AND less than or equal to the endYear query param.
             List<TimePerson> listofPeople = people.Where(p => (p.Year >= begYear) && (p.Year <= endYear)).ToList();
-            return listofPeople;
 
+            // Return the matching List subset of TimePerson objects
+            return listofPeople;
         }
     }
 }
+a
